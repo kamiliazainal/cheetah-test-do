@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Reads;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+//Route::method('uri', [controller_name::class,'function_name'])->name('anyname');
+Route::get('/read-db',[Reads::class,'read']);
